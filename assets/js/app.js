@@ -1,7 +1,22 @@
 var TodoList = new Marionette.Application();
 
-TodoList.StaticView = Marionette.ItemView.extend({
-  template: "#static-template"
+TodoList.Item = Backbone.Model.extend({
+  defaults: {
+    title: '',
+    description: ''
+  }
+});
+
+TodoList.ListView = Marionette.ItemView.extend({
+  template: "#item-template",
+
+  events: {
+    "click p": 'alertItem'
+  },
+
+  alertItem: function(){
+    alert(this.model.escape("description"));
+  }
 });
 
 TodoList.on("before:start", function(){
@@ -17,8 +32,16 @@ TodoList.on("before:start", function(){
 });
 
 TodoList.on("start", function(){
-  var staticView = new TodoList.StaticView();
-  TodoList.regions.main.show(staticView);
+  var item = new TodoList.Item({
+    title: "Grocery shopping",
+    description: "Buy groceries for the week"
+  });
+
+  var itemView = new TodoList.ListView({
+    model: item
+  });
+
+  TodoList.regions.main.show(itemView);
 });
 
 TodoList.start();
