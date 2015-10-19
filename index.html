@@ -3,48 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Todo List</title>
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
     <link href="./assets/css/application.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
   <body>
     <div class="container">
-
-      <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <span class="brand">Todo List</span>
+      <div class="row">
+        <div class="white col s12">
+          <div class="header">
+            <h1>TodoList
+              <img class="logo" src="assets/img/logo.png">
+            </h1>
           </div>
+
+          <div id="form"></div>
+          <div id="list"></div>
+
+          <script type="text/template" id="taskView">
+
+            <div class="card-panel pink col s6 offset-s3 white-text">
+              <p><%- title %></p>
+              <p><button class="btn waves-effect waves-light blue">Complete</button></p>
+            </div>
+          </script>
+
+          <script type="text/template" id="tasksView">
+            <h3>Tasks</h3>
+          </script>
+
+          <script type="text/template" id="noTasksView">
+            <h3>No Tasks</h3>
+          </script>
+
+          <script type="text/template" id="formView">
+            <div class="row">
+                <h3>New Task</h3>
+              <div class="input-field col s6 offset-s3">
+                <p><input type="text" id="title" placeholder="Title" /></p>
+                <p><button class="btn waves-effect waves-light pink">Create</button></p>
+              </div>
+            </div>
+          </script>
+
+          <script src="./assets/js/vendor/jquery.js"></script>
+          <script src="./assets/js/vendor/json2.js"></script>
+          <script src="./assets/js/vendor/underscore.js"></script>
+          <script src="./assets/js/vendor/backbone.js"></script>
+          <script src="./assets/js/vendor/backbone.marionette.js"></script>
+          <script src="./assets/js/app.js"></script>
         </div>
       </div>
-
-      <div id="form"></div>
-      <div id="list"></div>
-
-      <script type="text/template" id="taskView">
-        <p><%- title %></p>
-        <p data-id=><button>Complete</button></p>
-      </script>
-
-      <script type="text/template" id="tasksView">
-        <h2>Tasks</h2>
-      </script>
-
-      <script type="text/template" id="noTasksView">
-        <h2>No Tasks</h2>
-      </script>
-
-      <script type="text/template" id="formView">
-        <h2>New Task</h2>
-        <p><input type="text" id="title" placeholder="Title" /></p>
-        <p><button>Create</button></p>
-      </script>
-
-      <script src="./assets/js/vendor/jquery.js"></script>
-      <script src="./assets/js/vendor/json2.js"></script>
-      <script src="./assets/js/vendor/underscore.js"></script>
-      <script src="./assets/js/vendor/backbone.js"></script>
-      <script src="./assets/js/vendor/backbone.marionette.js"></script>
-      <script src="./assets/js/app.js"></script>
     </div>
   </body>
 </html>
