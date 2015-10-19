@@ -3,11 +3,12 @@
 This Backbone/Marionette app was built as part of the coding challenge
 for the Pana interview.
 
-### Base Features
+## Prerequisites:
 
-#### 1. Render a list of tasks
-#### 2. Add new tasks
-#### 3. Complete/delete a task
+You will need the following things properly installed on your computer.
+
+#### 1. Git
+#### 2. Node.js (with NPM)
 
 ## Setup:
 
@@ -15,6 +16,12 @@ for the Pana interview.
 #### 2. Run 'npm install'
 #### 3. Run 'npm start'
 #### 3. Visit 'http://localhost:3000' in a browser
+
+### Base Features
+
+#### 1. Render a list of tasks
+#### 2. Add new tasks
+#### 3. Complete/delete a task
 
 ## Working demo:
 
