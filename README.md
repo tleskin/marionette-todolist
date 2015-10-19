@@ -11,7 +11,7 @@ for the Pana interview.
 
 ## Setup:
 
-#### 1. Clone repo 'git clone git@github.com:tleskin/todolist-pana.git'
+#### 1. Clone repo 'git clone <repository-url>'
 #### 2. Run 'npm install'
 #### 3. Run 'npm start'
 #### 3. Visit 'http://localhost:3000' in a browser
