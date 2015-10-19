@@ -3,7 +3,9 @@ var TodoList = new Marionette.Application();
 var Task = Backbone.Model.extend();
 
 var Tasks = Backbone.Collection.extend({
-  model: Task
+  model: Task,
+
+  comparator: "date"
 });
 
 var TaskView = Backbone.Marionette.ItemView.extend({
@@ -36,14 +38,17 @@ var FormView = Marionette.ItemView.extend({
 
   ui: {
     title: '#title',
+    date:  '#date'
   },
 
   createNewTask: function() {
     this.collection.add({
       title: this.ui.title.val(),
+      date: this.ui.date.val(),
     });
 
     this.ui.title.val("");
+    this.ui.date.val("");
   }
 });
 
