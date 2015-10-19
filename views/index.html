@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <link href="/css/application.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="white col s12">
+          <div class="header">
+            <h1>TodoList
+              <img class="logo" src="/img/logo.png">
+            </h1>
+          </div>
+
+          <div id="form"></div>
+          <div id="list"></div>
+
+          <script type="text/template" id="taskView">
+
+            <div class="card-panel pink col s6 offset-s3 white-text">
+              <p><%- title %></p>
+              <p><button class="btn waves-effect waves-light blue">Complete</button></p>
+            </div>
+          </script>
+
+          <script type="text/template" id="tasksView">
+            <h3>Tasks</h3>
+          </script>
+
+          <script type="text/template" id="noTasksView">
+            <h3>No Tasks</h3>
+          </script>
+
+          <script type="text/template" id="formView">
+            <div class="row">
+                <h3>New Task</h3>
+              <div class="input-field col s6 offset-s3">
+                <p><input type="text" id="title" placeholder="Title" /></p>
+                <p><button class="btn waves-effect waves-light pink">Create</button></p>
+              </div>
+            </div>
+          </script>
+
+          <script src="/js/vendor/jquery.js"></script>
+          <script src="/js/vendor/json2.js"></script>
+          <script src="/js/vendor/underscore.js"></script>
+          <script src="/js/vendor/backbone.js"></script>
+          <script src="/js/vendor/backbone.marionette.js"></script>
+          <script src="/js/app.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
