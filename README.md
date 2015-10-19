@@ -9,6 +9,13 @@ for the Pana interview.
 #### 2. Add new tasks
 #### 3. Complete/delete a task
 
+## Setup:
+
+#### 1. Clone repo
+#### 2. Run 'npm install'
+#### 3. Run 'npm start'
+#### 3. Visit 'http://localhost:3000' in a browser
+
 ## Working demo:
 
 A working demo of the app can be seen at:
