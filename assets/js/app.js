@@ -1,6 +1,14 @@
 var TodoList = new Marionette.Application();
 
-var Task = Backbone.Model.extend();
+var Task = Backbone.Model.extend({
+  initialize : function() {
+
+  this.bind('remove', function() {
+    this.destroy();
+  });
+},
+
+});
 
 var Tasks = Backbone.Collection.extend({
   model: Task,
@@ -16,7 +24,8 @@ var TaskView = Backbone.Marionette.ItemView.extend({
   },
 
   completeTask: function(){
-    this.remove();
+    this.model.destroy();
+
   }
 });
 
