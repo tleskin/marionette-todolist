@@ -1,7 +1,6 @@
-## TodoList Pana
+##Marionette TodoList
 
-This Backbone/Marionette app was built as part of the coding challenge
-for the Pana interview.
+A todo list built with Backbone/Marionette.
 
 ### Prerequisites:
 
